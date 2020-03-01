@@ -1,0 +1,27 @@
+package epam;
+
+import java.util.Scanner;
+
+public class Calci {
+	public static void main(String[] args) {
+		Calculator obj = new Calculator();
+		Scanner s = new Scanner(System.in);
+		int x = 0;
+		int a = s.nextInt();
+		int b = s.nextInt();
+		System.out.println("Enter your Choice:\n"+"1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n");
+		int opr = s.nextInt();
+		switch(opr) {
+		case 1: x = obj.addition(a, b);
+		        break;
+		case 2: x = obj.subtract(a, b);
+		        break;
+		case 3: x = obj.multiply(a, b);
+                break;
+		case 4: x = obj.divide(a, b);
+                break;
+        default:System.out.println("Enter correct number");
+		}
+		System.out.println(x);
+	}
+}
